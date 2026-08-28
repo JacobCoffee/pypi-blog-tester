@@ -37,6 +37,7 @@ jobs:
           bun-version: latest
 
       - name: Setup Pages
+        id: pages
         uses: actions/configure-pages@v6
 
       - name: Install dependencies
@@ -53,6 +54,11 @@ jobs:
 
       - name: Build
         run: bun run build
+        env:
+          # A GitHub Pages project site is served from /<repo>/, so the site and
+          # base have to come from the Pages config rather than the defaults.
+          ASTRO_SITE: ${{ steps.pages.outputs.origin }}
+          ASTRO_BASE: ${{ steps.pages.outputs.base_path }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5

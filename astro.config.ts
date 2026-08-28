@@ -19,8 +19,11 @@ try {
 // RSS readers get actual XML instead of an HTML meta-refresh redirect.
 
 export default defineConfig({
-  site: "https://blog.pypi.org",
-  base: "/",
+  // blog.pypi.org serves from the domain root, but a GitHub Pages *project*
+  // site serves from /<repo>/. The deploy workflow passes the real values from
+  // actions/configure-pages; without them the defaults below are used.
+  site: process.env.ASTRO_SITE ?? "https://blog.pypi.org",
+  base: process.env.ASTRO_BASE || "/",
   integrations: [mdx(), sitemap(), react()],
   output: "static",
   markdown: {
