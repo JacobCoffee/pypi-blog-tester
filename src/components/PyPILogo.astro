@@ -1,0 +1,25 @@
+---
+import { withBase } from "../lib/utils";
+
+interface Props {
+  class?: string;
+  /** Rendered height in px; width follows the logo's own aspect ratio. */
+  size?: number;
+}
+
+// The PyPI cube mark is 65.812 x 58, so it is not square. Deriving the width
+// keeps it from being squashed wherever a caller asks for a given height.
+const ASPECT = 65.812035 / 58;
+
+const { class: className, size = 32 } = Astro.props;
+const width = Math.round(size * ASPECT);
+---
+
+<img
+  src={withBase("/pypi-logo.svg")}
+  alt=""
+  aria-hidden="true"
+  width={width}
+  height={size}
+  class={className}
+/>

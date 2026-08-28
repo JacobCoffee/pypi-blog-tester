@@ -7,7 +7,11 @@
   --color-python-blue: #306998;
   --color-python-blue-dark: #254f73;
   --color-python-blue-deeper: #1b3a5c;
-  --color-python-yellow: #ffd43b;
+  /* Dark-mode accents. The light-mode blue only reaches 3.2:1 on
+     --color-surface-dark; these reach 6.6:1 and 9.5:1. */
+  --color-python-blue-light: #5a9fd4;
+  --color-python-blue-lighter: #7cc0ec;
+  --color-python-yellow: #5a9fd4;
   --color-python-yellow-dark: #f0c419;
   --color-python-yellow-muted: #ffeaa0;
   --color-surface-light: #fafaf9;
@@ -48,7 +52,7 @@ body {
 }
 
 .dark ::selection {
-  background-color: var(--color-python-yellow);
+  background-color: var(--color-python-blue-light);
   color: #000;
 }
 
@@ -179,9 +183,9 @@ body {
 }
 
 .dark .tag-pill:hover {
-  border-color: var(--color-python-yellow);
-  background-color: rgba(255, 212, 59, 0.08);
-  color: var(--color-python-yellow);
+  border-color: var(--color-python-blue-light);
+  background-color: rgba(90, 159, 212, 0.08);
+  color: var(--color-python-blue-light);
 }
 
 /* ── Prose styling for blog content ──────────────── */
@@ -316,13 +320,13 @@ body {
 }
 
 .dark .prose a {
-  color: var(--color-python-yellow);
-  text-decoration-color: rgba(255, 212, 59, 0.4);
+  color: var(--color-python-blue-light);
+  text-decoration-color: rgba(90, 159, 212, 0.4);
 }
 
 .dark .prose a:hover {
-  text-decoration-color: var(--color-python-yellow);
-  color: var(--color-python-yellow-dark);
+  text-decoration-color: var(--color-python-blue-light);
+  color: var(--color-python-blue-lighter);
 }
 
 /* ── Inline code ─────────────────────────────────── */
@@ -412,7 +416,7 @@ body {
 }
 
 .dark .prose blockquote {
-  border-left-color: var(--color-python-yellow-dark);
+  border-left-color: var(--color-python-blue-lighter);
   color: #9ca3af;
 }
 
@@ -446,7 +450,7 @@ body {
 }
 
 .dark .prose li::marker {
-  color: var(--color-python-yellow);
+  color: var(--color-python-blue-light);
 }
 
 /* Nested lists */
@@ -706,7 +710,7 @@ body {
 }
 
 .dark .prose mark {
-  background-color: rgba(255, 212, 59, 0.2);
+  background-color: rgba(90, 159, 212, 0.2);
   color: var(--color-text-dark);
 }
 
@@ -938,7 +942,7 @@ body {
 }
 
 .dark [cmdk-item][data-selected="true"] {
-  background: rgba(255, 212, 59, 0.08);
+  background: rgba(90, 159, 212, 0.08);
 }
 
 [cmdk-item]:active {
@@ -984,7 +988,7 @@ body {
 }
 
 .dark [cmdk-item][data-selected="true"] .cmdk-post-icon {
-  color: var(--color-python-yellow);
+  color: var(--color-python-blue-light);
 }
 
 [cmdk-item][data-selected="true"] .cmdk-nav-icon {
@@ -992,7 +996,7 @@ body {
 }
 
 .dark [cmdk-item][data-selected="true"] .cmdk-nav-icon {
-  color: var(--color-python-yellow);
+  color: var(--color-python-blue-light);
 }
 
 .cmdk-post-content {
@@ -1522,7 +1526,7 @@ body {
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 .dark .post-refs-header {
-  background: linear-gradient(135deg, rgba(48, 105, 152, 0.08) 0%, rgba(255, 212, 59, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(48, 105, 152, 0.08) 0%, rgba(90, 159, 212, 0.05) 100%);
   border-bottom-color: rgba(255, 255, 255, 0.06);
 }
 
@@ -1566,7 +1570,7 @@ body {
 }
 
 .dark .toc-link:hover {
-  color: var(--color-python-yellow);
+  color: var(--color-python-blue-light);
 }
 
 .toc-link.toc-active {
@@ -1576,8 +1580,8 @@ body {
 }
 
 .dark .toc-link.toc-active {
-  color: var(--color-python-yellow);
-  border-left-color: var(--color-python-yellow);
+  color: var(--color-python-blue-light);
+  border-left-color: var(--color-python-blue-light);
 }
 
 .toc-link-h3 {

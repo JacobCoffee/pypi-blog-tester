@@ -1,5 +1,5 @@
 ---
-import PythonLogo from "./PythonLogo.astro";
+import PyPILogo from "./PyPILogo.astro";
 import CommandPalette from "./CommandPalette";
 import { withBase } from "../lib/utils";
 const navItems = [
@@ -12,7 +12,7 @@ const currentPath = Astro.url.pathname;
 <header class="sticky top-0 z-50 border-b border-zinc-200 bg-white/80 backdrop-blur-xl dark:border-zinc-800 dark:bg-[#0f1117]/80">
   <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
     <a href={withBase("/")} class="group flex items-center gap-2.5">
-      <PythonLogo width={30} height={30} class="transition-transform duration-300 group-hover:scale-110" />
+      <PyPILogo size={30} class="transition-transform duration-300 group-hover:scale-110" />
       <span class="text-lg font-semibold tracking-tight text-zinc-900 dark:text-zinc-100" style="font-family: var(--font-display);">
         The PyPI Blog
       </span>
@@ -26,7 +26,7 @@ const currentPath = Astro.url.pathname;
             "rounded-lg px-3.5 py-2 text-sm font-medium transition-all duration-200",
             label === "Home" && "hidden sm:inline-flex",
             currentPath === href || (href !== "/" && currentPath.startsWith(href))
-              ? "bg-[#306998]/10 text-[#306998] dark:bg-[#ffd43b]/10 dark:text-[#ffd43b]"
+              ? "bg-[#306998]/10 text-[#306998] dark:bg-[#5a9fd4]/10 dark:text-[#5a9fd4]"
               : "text-zinc-700 hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-100",
           ]}
         >

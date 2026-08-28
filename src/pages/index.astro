@@ -2,7 +2,7 @@
 export const prerender = true;
 
 import BaseLayout from "../layouts/BaseLayout.astro";
-import PythonLogo from "../components/PythonLogo.astro";
+import PyPILogo from "../components/PyPILogo.astro";
 import { formatDate, postUrl, withBase, renderDescriptionLinks } from "../lib/utils";
 import { getCollection } from "astro:content";
 import { authorsByPost } from "../lib/authors";
@@ -51,12 +51,12 @@ const featuredAuthors = postAuthors.get(featured.id)?.map((a) => a.name).join(",
         <div>
           <div class="mb-5 inline-flex items-center gap-2">
             <span class="latest-pulse h-2 w-2 rounded-full bg-green-500"></span>
-            <span class="text-xs font-bold uppercase tracking-[0.15em] text-[#306998] dark:text-[#ffd43b]">Latest</span>
+            <span class="text-xs font-bold uppercase tracking-[0.15em] text-[#306998] dark:text-[#5a9fd4]">Latest</span>
           </div>
 
           <a href={withBase(postUrl(featured.id))} class="group block">
             <h1
-              class="max-w-4xl text-3xl font-extrabold leading-[1.15] tracking-tight text-zinc-900 transition-colors group-hover:text-[#306998] dark:text-zinc-100 dark:group-hover:text-[#ffd43b] sm:text-4xl lg:text-5xl"
+              class="max-w-4xl text-3xl font-extrabold leading-[1.15] tracking-tight text-zinc-900 transition-colors group-hover:text-[#306998] dark:text-zinc-100 dark:group-hover:text-[#5a9fd4] sm:text-4xl lg:text-5xl"
               style="font-family: var(--font-display); letter-spacing: -0.02em;"
             >
               {featured.data.title}
@@ -90,8 +90,8 @@ const featuredAuthors = postAuthors.get(featured.id)?.map((a) => a.name).join(",
         <!-- Python Logo -->
         <div class="hidden lg:block">
           <div class="relative">
-            <div class="absolute -inset-6 rounded-full bg-gradient-to-br from-[#306998]/8 to-[#ffd43b]/8 blur-2xl dark:from-[#306998]/15 dark:to-[#ffd43b]/15"></div>
-            <PythonLogo width={140} height={140} class="relative opacity-80 dark:opacity-60" />
+            <div class="absolute -inset-6 rounded-full bg-gradient-to-br from-[#306998]/8 to-[#ffd43b]/8 blur-2xl dark:from-[#306998]/15 dark:to-[#5a9fd4]/15"></div>
+            <PyPILogo size={140} class="relative opacity-80 dark:opacity-60" />
           </div>
         </div>
       </div>
@@ -110,7 +110,7 @@ const featuredAuthors = postAuthors.get(featured.id)?.map((a) => a.name).join(",
         <h2 class="text-sm font-bold uppercase tracking-[0.1em] text-zinc-400 dark:text-zinc-500" style="font-family: var(--font-display);">Recent</h2>
         <a
           href={withBase("/blog")}
-          class="group inline-flex items-center gap-1.5 text-sm font-medium text-[#306998] transition-colors hover:text-[#254f73] dark:text-[#ffd43b] dark:hover:text-[#f0c419]"
+          class="group inline-flex items-center gap-1.5 text-sm font-medium text-[#306998] transition-colors hover:text-[#254f73] dark:text-[#5a9fd4] dark:hover:text-[#f0c419]"
         >
           All posts
           <svg class="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -123,7 +123,7 @@ const featuredAuthors = postAuthors.get(featured.id)?.map((a) => a.name).join(",
         {recent.map((post) => (
           <article class="post-card group relative bg-white p-5 dark:bg-[#0f1117]">
             <a href={withBase(postUrl(post.id))} class="block">
-              <h3 class="text-[0.9375rem] font-semibold leading-snug text-zinc-900 transition-colors group-hover:text-[#306998] dark:text-zinc-100 dark:group-hover:text-[#ffd43b]" style="font-family: var(--font-display);">
+              <h3 class="text-[0.9375rem] font-semibold leading-snug text-zinc-900 transition-colors group-hover:text-[#306998] dark:text-zinc-100 dark:group-hover:text-[#5a9fd4]" style="font-family: var(--font-display);">
                 {post.data.title}
               </h3>
             </a>
