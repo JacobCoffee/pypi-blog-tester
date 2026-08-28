@@ -2,6 +2,7 @@ import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import react from "@astrojs/react";
+import tailwindcss from "@tailwindcss/vite";
 import { unified } from "@astrojs/markdown-remark";
 import fs from "node:fs";
 import remarkPythonRefs from "./src/plugins/remark-python-refs";
@@ -25,6 +26,10 @@ export default defineConfig({
   site: process.env.ASTRO_SITE ?? "https://blog.pypi.org",
   base: process.env.ASTRO_BASE || "/",
   integrations: [mdx(), sitemap(), react()],
+  // Tailwind runs as a Vite plugin rather than through PostCSS: Astro 7 enables
+  // vite's postcss-import, which tries to resolve `@import "tailwindcss"` as a
+  // file on disk and fails before Tailwind ever sees it.
+  vite: { plugins: [tailwindcss()] },
   output: "static",
   markdown: {
     processor: unified({ remarkPlugins: [remarkPythonRefs] }),
