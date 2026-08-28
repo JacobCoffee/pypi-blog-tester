@@ -1,0 +1,19 @@
+{
+  "/pages/2": "/blog/2",
+  "/pages/3": "/blog/3",
+  "/pages/4": "/blog/4",
+  "/pages/5": "/blog/5",
+  "/pages/6": "/blog/6",
+  "/archive/2023": "/blog/year/2023",
+  "/archive/2023/pages/2": "/blog/year/2023",
+  "/archive/2023/pages/3": "/blog/year/2023",
+  "/archive/2024": "/blog/year/2024",
+  "/archive/2024/pages/2": "/blog/year/2024",
+  "/archive/2025": "/blog/year/2025",
+  "/archive/2025/pages/2": "/blog/year/2025",
+  "/archive/2026": "/blog/year/2026",
+  "/feed_rss_updated.xml": "/rss.xml",
+  "/feed_json_created.json": "/rss.xml",
+  "/feed_json_updated.json": "/rss.xml",
+  "/author/Thespi-Brain": "/author/thespi-brain"
+}

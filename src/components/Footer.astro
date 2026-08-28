@@ -1,0 +1,55 @@
+---
+import PythonLogo from "./PythonLogo.astro";
+import { withBase } from "../lib/utils";
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-zinc-200 bg-white dark:border-zinc-800 dark:bg-[#0f1117]">
+  <div class="mx-auto max-w-6xl px-6 py-12">
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-3">
+      <!-- Brand column -->
+      <div>
+        <a href={withBase("/")} class="flex items-center gap-2">
+          <PythonLogo width={24} height={24} />
+          <span class="text-sm font-semibold text-zinc-800 dark:text-zinc-200" style="font-family: var(--font-display);">The PyPI Blog</span>
+        </a>
+        <p class="mt-3 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
+          The official blog of the Python Package Index. News about releases, features, and the community.
+        </p>
+      </div>
+
+      <!-- Links column -->
+      <div>
+        <h3 class="text-xs font-semibold uppercase tracking-widest text-zinc-500 dark:text-zinc-400">Related Links</h3>
+        <ul class="mt-3 space-y-2">
+          <li><a href="https://www.python.org" class="text-sm text-zinc-600 transition-colors hover:text-[#306998] dark:text-zinc-300 dark:hover:text-[#ffd43b]">Python.org</a></li>
+          <li><a href="https://discuss.python.org" class="text-sm text-zinc-600 transition-colors hover:text-[#306998] dark:text-zinc-300 dark:hover:text-[#ffd43b]">Python Discourse</a></li>
+          <li><a href="https://devguide.python.org" class="text-sm text-zinc-600 transition-colors hover:text-[#306998] dark:text-zinc-300 dark:hover:text-[#ffd43b]">Python Developer's Guide</a></li>
+        </ul>
+      </div>
+
+      <!-- Subscribe column -->
+      <div>
+        <h3 class="text-xs font-semibold uppercase tracking-widest text-zinc-500 dark:text-zinc-400">Subscribe</h3>
+        <ul class="mt-3 space-y-2">
+          <li>
+            <a href={withBase("/rss.xml")} class="inline-flex items-center gap-1.5 text-sm text-zinc-600 transition-colors hover:text-orange-600 dark:text-zinc-300 dark:hover:text-orange-400">
+              <svg class="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 012.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 012.18-2.18zM4 4.44A15.56 15.56 0 0119.56 20h-2.83A12.73 12.73 0 004 7.27V4.44zM4 10.1a9.9 9.9 0 019.9 9.9h-2.83A7.07 7.07 0 004 12.93V10.1z"/></svg>
+              RSS Feed
+            </a>
+          </li>
+          <li><a href={withBase("/tags")} class="text-sm text-zinc-600 transition-colors hover:text-[#306998] dark:text-zinc-300 dark:hover:text-[#ffd43b]">Browse by Tag</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-10 flex items-center justify-between border-t border-zinc-200 pt-6 dark:border-zinc-800">
+      <p class="text-xs text-zinc-400 dark:text-zinc-500">
+        &copy; {year} Python Software Foundation
+      </p>
+      <p class="text-xs text-zinc-400 dark:text-zinc-500">
+        <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="noopener noreferrer" class="underline decoration-zinc-300 underline-offset-2 hover:text-zinc-600 dark:decoration-zinc-600 dark:hover:text-zinc-300">CC BY-NC-SA 3.0</a>
+      </p>
+    </div>
+  </div>
+</footer>

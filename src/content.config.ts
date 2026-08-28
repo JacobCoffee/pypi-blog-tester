@@ -1,0 +1,36 @@
+import { defineCollection, z } from "astro:content";
+import { glob } from "astro/loaders";
+
+const posts = defineCollection({
+  loader: glob({ pattern: "*/index.{md,mdx}", base: "./content/posts" }),
+  schema: z.object({
+    title: z.string(),
+    publishDate: z.coerce.date(),
+    updatedDate: z.coerce.date().optional(),
+    // Author ids, matching the filenames under content/authors. Posts can have
+    // more than one author, so this is an array rather than a display name.
+    authors: z.array(z.string()).min(1),
+    description: z.string().optional(),
+    tags: z.array(z.string()).default([]),
+    published: z.boolean().default(true),
+    // Slugs of related posts, rendered as "see also" links.
+    related: z.array(z.string()).default([]),
+    fediverseCreator: z.string().optional(),
+  }),
+});
+
+const authors = defineCollection({
+  loader: glob({ pattern: "*.json", base: "./content/authors" }),
+  schema: z.object({
+    name: z.string(),
+    bio: z.string().optional(),
+    github: z.string().optional(),
+    avatar: z.string().optional(),
+    bluesky: z.string().optional(),
+    mastodon: z.string().optional(),
+    website: z.string().optional(),
+    featured: z.boolean().default(false),
+  }),
+});
+
+export const collections = { posts, authors };

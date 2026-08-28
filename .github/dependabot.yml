@@ -1,0 +1,41 @@
+version: 2
+updates:
+  - package-ecosystem: bun
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 10
+    groups:
+      astro:
+        patterns:
+          - "astro"
+          - "@astrojs/*"
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
+          - "@types/react*"
+      tailwind:
+        patterns:
+          - "tailwindcss"
+          - "@tailwindcss/*"
+          - "postcss"
+      dependencies:
+        patterns: ["*"]
+    cooldown:
+      # https://blog.yossarian.net/2025/11/21/We-should-all-be-using-dependency-cooldowns
+      # Cooldowns protect against supply chain attacks by avoiding the
+      # highest-risk window immediately after new releases.
+      default-days: 14
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 5
+    groups:
+      actions:
+        patterns:
+          - "*"
+    cooldown:
+      default-days: 14
