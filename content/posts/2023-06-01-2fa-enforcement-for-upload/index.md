@@ -25,13 +25,10 @@ we began notifying users on upload that this change was coming.
 If you have 2FA enabled and have been using only your password to upload,
 the following email is likely familiar to you:
 
-<figure markdown>
-  ![Sample notice email](./2023-06-01-2fa-notice-email.png)
-  <figcaption>
-      A sample notice email sent when users with 2FA enabled
-      upload using only their password.
-  </figcaption>
-</figure>
+![Sample notice email](./2023-06-01-2fa-notice-email.png)
+
+*A sample notice email sent when users with 2FA enabled
+      upload using only their password.*
 
 Initially, we intended for this notice to live for six months before
 we began enforcement.

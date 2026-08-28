@@ -35,7 +35,7 @@ This class of malware is different from most malware published to PyPI, which ar
 * Targeting open source projects with insecure repositories, release workflows, or authentication
 * Targeting developers installing the latest versions of open source projects and exfiltrating API tokens and keys
 
-Using the API tokens and keys gathered from developer machines, the malware authors are able to further compromise other open source packages if API tokens for PyPI or GitHub are exfiltrated. This cycle continues as long as it is effective in exfiltrating more credentials. 
+Using the API tokens and keys gathered from developer machines, the malware authors are able to further compromise other open source packages if API tokens for PyPI or GitHub are exfiltrated. This cycle continues as long as it is effective in exfiltrating more credentials.
 
 ## What is PyPI doing to mitigate malware?
 
@@ -134,7 +134,7 @@ Note that `pip freeze` doesn't create a lock file: a lock file must include chec
 ## Protecting your project as an open source maintainer
 
 If you are a maintainer of an open source project on PyPI, you can do your part to protect your users from compromises.
-There are three approaches we recommend: 
+There are three approaches we recommend:
 
 1. securing your release workflows
 2. using Trusted Publishers

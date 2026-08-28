@@ -63,10 +63,9 @@ Listen to [RealPython](https://realpython.com/podcasts/rpp/177/) and [Talk Pytho
 In August 2023, we [developed an email campaign](https://github.com/pypi/warehouse/pull/14444)
 to notify users post-upload to PyPI, who had not yet enabled 2FA on their accounts.
 
-<figure markdown>
-  ![emails](./2024-01-01-two-factor-emails-scheduled.png)
-  <figcaption>We have sent over 474,000 emails to date.</figcaption>
-</figure>
+![emails](./2024-01-01-two-factor-emails-scheduled.png)
+
+*We have sent over 474,000 emails to date.*
 
 ## How did we get here?
 
@@ -103,6 +102,3 @@ you are helping to make PyPI more secure for everyone.
 Thank you to all the contributors to PyPI,
 and the maintainers of the projects that make up PyPI.
 Your work is appreciated. ❤️
-
-*[TOTP]: Time-based one-time password
-*[WebAuthn]: Web Authentication

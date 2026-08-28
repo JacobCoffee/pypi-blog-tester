@@ -56,8 +56,8 @@ index 0f58158..3b88b5d 100644
 --- a/cabotage/celery/tasks/build.py
 +++ b/cabotage/celery/tasks/build.py
 @@ -395,7 +395,10 @@ def build_release_buildkit(release):
- 
- 
+
+
  def _fetch_github_file(
 -    github_repository="owner/repo", ref="main", access_token=None, filename="Dockerfile"
 +    github_repository="owner/repo",

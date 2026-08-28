@@ -17,7 +17,7 @@ Trusted Publishing has proven popular since [its launch in 2023](/posts/2023-04-
 
 **Recap:** Trusted Publishing enables software build platforms to publish packages to PyPI on your behalf,
 eliminating the need to manage long-lived authentication tokens.
-After a one-time setup where you delegate publishing authority to your platform, 
+After a one-time setup where you delegate publishing authority to your platform,
 it automatically obtains short-lived, scoped tokens for each build—no manual token management required.
 
 Read the [Security Model](https://docs.pypi.org/trusted-publishers/security-model/)

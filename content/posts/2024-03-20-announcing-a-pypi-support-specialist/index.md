@@ -33,7 +33,7 @@ and out-stripped our current volunteer plus
 one tenth of a staff person capacity.
 We also know that some community members have noticed
 and expressed frustration with the time-frame that goes with tasks
-that don't have sufficient staffing. 
+that don't have sufficient staffing.
 
 Much of this work is sensitive and complex such that
 it needs to be performed by a PSF staff person.
@@ -41,7 +41,7 @@ It involves personal information and verification processes
 to make sure we’re giving access and names to the correct entities.
 Work like this needs to be done by a person who is here day after day
 to carry out multi-step verification procedures
-and is accountable to the PSF. 
+and is accountable to the PSF.
 
 We are very happy to share the news that
 [we are hiring a person](https://pythonsoftwarefoundation.applytojob.com/apply/nyYHuOha9h/PyPI-Support-Specialist)

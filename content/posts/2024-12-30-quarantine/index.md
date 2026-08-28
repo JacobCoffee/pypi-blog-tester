@@ -82,7 +82,7 @@ With those in mind, I set out to implement the feature.
 ### Take a page from the book of Yank
 
 Prior to this change, an existing feature was "Yank",
-per [PEP 592](https://peps.python.org/pep-0592/). 
+per [PEP 592](https://peps.python.org/pep-0592/).
 
 A Project with no Releases will be listed in the Simple Repository API[^5],
 but the resulting detail page will not have any links,

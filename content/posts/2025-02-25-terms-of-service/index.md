@@ -44,7 +44,7 @@ to paid
 
 We have worked with our legal team to retain compatibility with the superseded
 [Terms of Use](https://policies.python.org/pypi.org/Terms-of-Use/)
-while adding as permissive a set of new terms as possible to ensure that PyPI users 
+while adding as permissive a set of new terms as possible to ensure that PyPI users
 and the PSF are protected.
 
 You will notice a banner on login reminding you of these updated terms,
@@ -52,7 +52,7 @@ as well as an email notification to your primary email address if it has been ve
 These terms will take effect for existing users March 27, 2025 and
 your continued use of PyPI after that date constitutes agreement to these new terms.
 
-[^1]: 
+[^1]:
   See these commits for substantive changes since the Terms of Use was introduced:
   [2009-11-29](https://github.com/pypi/legacy/commit/ddbd32a78a431ab46cad912046c2492998edc618#diff-a6e30135c956f467cffa36eb37a756a53921754d55ddd6ea80d2a0b4c3f4abfaR16-R33)
   and

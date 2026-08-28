@@ -90,7 +90,7 @@ against their service on every login.
 Unfortunately, the password in question had not previously surfaced
 in a breach that HaveIBeenPwned knows about, so this didn't prevent the attack.
 
-One of the best tools we have to date to prevent account takeover 
+One of the best tools we have to date to prevent account takeover
 is [Two-Factor Authentication](https://pypi.org/help/#twofa)
 (2FA, or MFA - multifactor auth).
 
@@ -135,7 +135,7 @@ or an account is deleted, we email the address on file.
 We were informed of the incident by the impacted user,
 who still had access to the email account associated with their PyPI username.
 
-Here are a few things you can do to help protect your PyPI account: 
+Here are a few things you can do to help protect your PyPI account:
 
 - **[Add 2FA now](https://pypi.org/help/#twofa)**.
 - Use a unique and sufficiently complex password for your PyPI account.

@@ -12,7 +12,7 @@ published: true
 
 ## Summary
 
-I recently responded to an attack campaign where malicious actors injected code into GitHub Actions workflows 
+I recently responded to an attack campaign where malicious actors injected code into GitHub Actions workflows
 attempting to steal PyPI publishing tokens.
 PyPI was not compromised, and no PyPI packages were published by the attackers.
 
@@ -30,12 +30,12 @@ You can read more about the details of the attack on [GitGuardian's blog](https:
 ## Timeline and Response
 
 On September 5th, a GitGuardian employee used the [PyPI "Report as malware" button](/posts/2024-03-06-malware-reporting-evolved/)
-to submit their findings for a project named `fastuuid` - namely they found a malicious GitHub Actions workflow 
+to submit their findings for a project named `fastuuid` - namely they found a malicious GitHub Actions workflow
 attempting to exfiltrate PyPI tokens to a remote server.
 No compromise on PyPI was found, tokens relating to the user accounts were invalidated,
 and I reached out to the project owners to notify and help secure the account and project.
 
-Later on September 5th, another researcher from GitGuardian emailed PyPI Security 
+Later on September 5th, another researcher from GitGuardian emailed PyPI Security
 directly about their current findings, effectively an expansion of the previous attack.
 Due to some of the contents in that email, it ended up in our inbound Spam folder,
 delaying response until September 10th when I became aware of the attack via other channels,
@@ -54,7 +54,7 @@ Many of the maintainers also proactively rotated their PyPI tokens.
 After confirming that no PyPI accounts had been compromised,
 on September 15th I reached out to the maintainers of the affected projects to notify them of the situation,
 to let them know that their tokens had been invalidated,
-and recommend using [Trusted Publishers](https://docs.pypi.org/trusted-publishers/) 
+and recommend using [Trusted Publishers](https://docs.pypi.org/trusted-publishers/)
 with GitHub Actions to help protect their projects in the future.
 
 ## What You Can Do

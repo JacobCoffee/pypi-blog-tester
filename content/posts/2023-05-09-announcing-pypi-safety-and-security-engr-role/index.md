@@ -15,7 +15,7 @@ Amazon Web Services (AWS)
 as the inaugural Security Sponsor for PyPI,
 investing $144,000 over one year
 to fund key enhancements to PyPI infrastructure and operations,
-including the creation of a new “PyPI Safety & Security Engineer” role. 
+including the creation of a new “PyPI Safety & Security Engineer” role.
 
 
 

@@ -30,17 +30,17 @@ PyPI itself has not been breached with this attack.
 
 
 
-This appears to be similar in nature to a recent incident involving `npm` packages, 
-where attackers successfully phished end-user credentials, 
+This appears to be similar in nature to a recent incident involving `npm` packages,
+where attackers successfully phished end-user credentials,
 and then compromised popular packages to distribute malware via npmjs.com.
 Read a [report on this attack here](https://www.bleepingcomputer.com/news/security/popular-npm-linter-packages-hijacked-via-phishing-to-drop-malware/).
 
 To briefly recap the attack pattern,
-the attackers established a domain name, SSL certificate, 
-and server running in a Virtual Private Server (VPS) in the cloud, 
+the attackers established a domain name, SSL certificate,
+and server running in a Virtual Private Server (VPS) in the cloud,
 which would transparently proxy requests to PyPI.org.
 This could be termed a "forward proxy", many CDN providers operate their services this way.
-We cannot know for certain, but it appears that the attackers sent emails 
+We cannot know for certain, but it appears that the attackers sent emails
 to addresses found in package metadata, which is publicly available due to
 users putting them in their `setup.py` or `pyproject.toml` files.
 The emails contained links to the phishing domain,
@@ -69,12 +69,12 @@ flowchart LR
 
 This may be termed ["adversary in the middle" (AiTM) attack](https://capec.mitre.org/data/definitions/94.html),
 however the difference here is that the attacker is not intercepting traffic between the user and PyPI.org,
-rather is acting as a forward proxy, 
+rather is acting as a forward proxy,
 which is a common practice for content delivery networks (CDNs) and the like.
 
 Since a browser's address bar showed `hxxps://pypj.org/...`,
 and the website content of legitimate `pypi.org`,
-users might have missed the small difference between a lowercase `i` and `j`, 
+users might have missed the small difference between a lowercase `i` and `j`,
 and tricked into thinking they were on the official PyPI website,
 and submitted their credentials to the phishing domain.
 
@@ -90,7 +90,7 @@ to complete the login process.
 However, since the attacker was in between the user and PyPI.org,
 they could have captured the second factor as well, and could have used the TOTP code
 within a short time interval, or potentially even captured the session cookies
-provided during the response to the login request, 
+provided during the response to the login request,
 and thus bypassed the need for 2FA for a short time.
 
 If the user had enrolled a [Security Device](https://pypi.org/help/#utfkey)
@@ -118,7 +118,7 @@ _Keep in mind: in the USA, the weekend is Saturday and Sunday._
   which appears to be from PyPI.org, but with a different domain name.
 - 14:01 EDT (18:01 UTC): A volunteer PyPI Admin posts a message about this phishing attack in the PyPI Admins chat.
 - 18:37 EDT (22:37 UTC): A community member posts about their experience on [Python Forums](https://discuss.python.org/t/pypi-org-phishing-attack/100267)
-- 19:18 EDT (23:18 UTC): On-call PyPI Admin sees the message and escalates to another volunteer PyPI Admin for assistance, 
+- 19:18 EDT (23:18 UTC): On-call PyPI Admin sees the message and escalates to another volunteer PyPI Admin for assistance,
   while submitting abuse complaints to the domain registrar NameSilo (report #1) and content delivery network (CDN) provider Cloudflare (report #2).
 - 19:38 EDT (23:38 UTC): A volunteer PyPI Admin responds, and begins investigation of the phishing attack.
 - 20:07 EDT (00:07 UTC): The volunteer PyPI Admin shares findings and some actions taken in chat, and has to leave for personal reasons.
@@ -131,14 +131,14 @@ _Keep in mind: in the USA, the weekend is Saturday and Sunday._
 - 08:57 EDT (12:57 UTC): PyPI Admin staff sees the comments in chat, begins investigation follow up
 - 09:20 EDT (13:20 UTC): Available PyPI Admins (volunteer and staff) & other PSF parties meet to determine next steps.
 - 10:22 EDT (14:22 UTC): PyPI Admins post an [initial report](/posts/2025-07-28-pypi-phishing-attack/) to the PyPI blog, and share it on social media.
-- 10:44 EDT (14:44 UTC): PyPI Admins post a notice to [`pypi-announce` mailing list](https://mail.python.org/mailman3/lists/pypi-announce.python.org/), 
+- 10:44 EDT (14:44 UTC): PyPI Admins post a notice to [`pypi-announce` mailing list](https://mail.python.org/mailman3/lists/pypi-announce.python.org/),
   and a similar is posted to the more general [`security-announce` mailing list](https://mail.python.org/mailman3/lists/security-announce.python.org/).
 - 11:37 EDT (15:37 UTC): A [new feature is added to PyPI](https://github.com/pypi/warehouse/pull/18427) to detect and warn users about phishing domains,
   which is deployed to production.
 - 11:59 EDT (15:59 UTC): A threat hunter posts on Twitter about a finding in `num2words` 0.5.15
 - 12:01 EDT (16:01 UTC): Another PyPI Admin submits another abuse report to Cloudflare (report #3), with more context and details - requests, headers, IP address, and more.
 - 12:05 EDT (16:05 UTC): Cloudflare response to initial abuse complaint from Saturday (report #2) as "invalid".
-- 12:18 EDT (16:18 UTC): PyPI Admins observe that Cloudflare placed a "Suspected Phishing" warning when visiting the phishing domain, 
+- 12:18 EDT (16:18 UTC): PyPI Admins observe that Cloudflare placed a "Suspected Phishing" warning when visiting the phishing domain,
   reducing the probability for users to fall for the attack, despite declining the abuse reports.
 - 12:20 EDT (16:20 UTC): NameSilo places the phishing domain under administrative `ClientHold` status.
 - 12:23 EDT (16:23 UTC): Cloudflare responds to second abuse report (report #3) as "invalid".

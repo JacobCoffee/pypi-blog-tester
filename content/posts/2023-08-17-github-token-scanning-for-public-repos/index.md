@@ -44,10 +44,9 @@ we set up some metrics to track the number of tokens revoked.
 Here's a visualization showing the amount of inbound notifications from GitHub,
 and the number of tokens we've revoked *(click for larger image)*:
 
-<figure markdown>
-  [![GitHub secret scanning metrics](./dd-gh-token-scanning_2023-08-16_18.12.26.png)](../assets/dd-gh-token-scanning_2023-08-16_18.12.26.png)
-  <figcaption>Bar charts of values over period of 1 year, and total counts of: received (5.87k), valid (537), processed (535)</figcaption>
-</figure>
+![GitHub secret scanning metrics](./dd-gh-token-scanning_2023-08-16_18.12.26.png)
+
+*Bar charts of values over period of 1 year, and total counts of: received (5.87k), valid (537), processed (535)*
 
 We show 15 months of data,
 thanks to our infrastructure sponsor [Datadog](https://www.datadoghq.com/).

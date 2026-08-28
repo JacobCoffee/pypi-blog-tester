@@ -135,7 +135,7 @@ compliance with Python package and ZIP standards:
   See the CPython `zipfile` module for a ZIP implementation that implements this
   logic. Begin checking the `RECORD` file against ZIP contents and erroring
   or warning the user that the wheel is incorrectly formatted.
-  
+
 ## Acknowledgements
 
 Thanks to Caleb Brown (Google Open Source Security Team) and Tim Hatch (Netflix) for reporting this issue.

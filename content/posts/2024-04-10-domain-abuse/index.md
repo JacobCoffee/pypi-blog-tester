@@ -174,6 +174,3 @@ _My role is made possible with the support from
 [Amazon Web Services Open Source](https://aws.amazon.com/opensource/),
 [Georgetown CSET](https://cset.georgetown.edu/),
 the [PSF](https://www.python.org/psf/) and their sponsors._
-
-*[ICANN]: [Internet Corporation for Assigned Names and Numbers](https://icann.org)
-*[SLA]: [Service Level Agreement](https://wikipedia.org/wiki/Service-level_agreement)

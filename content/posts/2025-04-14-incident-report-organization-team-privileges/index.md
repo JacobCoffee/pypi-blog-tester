@@ -76,7 +76,7 @@ I spun up a local development environment of
 from the current `main` branch locally and followed the reporter's steps to reproduce:
 
 > The basic reproduce steps were:
-> 
+>
 > 1. Add a user to an organization as a member
 > 2. Add that member to a organization team
 > 3. Remove the member from the organization
@@ -117,7 +117,7 @@ where
    ors. role_name is null;
  organization | team_name   | user      | team_role | organization_role
 --------------+-------------+-----------+-----------+-------------------
- spam         | Spam-owners | spamlover | Member    | 
+ spam         | Spam-owners | spamlover | Member    |
 (1 row)
 ```
 
@@ -125,7 +125,7 @@ This query showed me that one instance of a User having an Organization Team Rol
 _without_ being a Member of that Organization still existed on PyPI[^2].
 The reporter made clear that they had already resolved the instance from their testing.
 
-I drafted a notice to the five users with role `Owner` on the impacted Organization, 
+I drafted a notice to the five users with role `Owner` on the impacted Organization,
 and took a moment to realize that this was our first time emailing Organization
 Owners as a group, and that we needed to account for the fact that Users on PyPI
 do not necessarily already know one-another's email addresses, as it is not required
@@ -153,7 +153,7 @@ from
 where
   tag in ('organization:team_role:remove', 'organization:organization_role:remove')
 order by time;
-    name    |            time            |                  tag                  |     username      
+    name    |            time            |                  tag                  |     username  
 ------------+----------------------------+---------------------------------------+-------------------
  lumberjack | 2023-05-02 03:01:18.935901 | organization:organization_role:remove | sirrobin
  holygrail  | 2023-07-06 12:55:43.261593 | organization:organization_role:remove | blackknight

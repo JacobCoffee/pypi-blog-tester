@@ -30,7 +30,7 @@ as well as ratelimits and other "basic" methods.
 
 One of the most impactful mechanisms we currently have is prohibiting
 known "throw-away" email domains from creating accounts on the index.
-We currently use the [disposable-email-domains](https://github.com/disposable-email-domains/disposable-email-domains) 
+We currently use the [disposable-email-domains](https://github.com/disposable-email-domains/disposable-email-domains)
 list as well as our own internal list to block registration with
 －or association of －
 such domains for PyPI accounts.

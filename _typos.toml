@@ -34,6 +34,8 @@ Langa = "Langa"
 Ned = "Ned"
 haypo = "haypo"
 # Python/tech terms
+certifi = "certifi"   # the PyPI project, referenced by name
+Inforce = "Inforce"   # AWS re:Inforce, the conference
 pyc = "pyc"
 pyo = "pyo"
 repr = "repr"
